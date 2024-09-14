@@ -97,4 +97,4 @@ gulp.task('watch', function(){
     gulp.watch('./sass/**/*.scss/', ['sass']);
 });
 
-gulp.task('default', ['build', 'serve', 'sass', 'watch']);
+gulp.task('default', gulp.series('build', 'serve', 'sass', 'watch'));
